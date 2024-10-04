@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-
-    <title>{% block head_title %}head title of base dot html{% endblock head_title %}</title>
-
+    <title>
+      {% block head_title %}
+      head title of base dot html
+      {% endblock head_title %}
+    </title>   
+    {% include 'base/css.html' %}
   </head>
   <body>
-
-    <h1>{{ page_title }}</h1>
-
+    {% include 'nav/navbar.html' %}
     {% block content %}
     The text of base dot html
-
     {% endblock content %}
-    
+    {% include 'base/js.html' %}
   </body>
